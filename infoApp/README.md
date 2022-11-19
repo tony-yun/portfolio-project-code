@@ -1,4 +1,4 @@
-<h1 align="center">wateraiInfo</h1>
+<h1 align="center">[React Native]wateraiInfo</h1>
 <h1 align="center">(iOS & Android)</h1>
 
 <div align="center">
@@ -8,10 +8,8 @@
   <blockquote><b>The Information App that provide users detected water level.</b></blockquote>
   <pre align="center">App Store: <a href="https://apps.apple.com/kr/app/wateraiinfo/id6444245568">wateraiInfo</a><br/></pre>
   <pre align="center">Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.wateraiinfo">wateraiInfo</a><br/></pre>
-
 </div>
 
-<br/>
 <br/>
 
 ### Features
