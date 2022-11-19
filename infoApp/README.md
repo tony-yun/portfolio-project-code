@@ -1,4 +1,4 @@
-<h1 align="center">[React Native]wateraiInfo</h1>
+<h1 align="center">[React Native]wateraiInfo<br/>(iOS & Android)</h1>
 <h1 align="center">(iOS & Android)</h1>
 
 <div align="center">
