@@ -2,8 +2,6 @@
 <h1 align="center">(iOS & Android)</h1>
 
 <div align="center">
-  <img src="docs/static/img/11.png" width="50%">
-  <br />
   <br />
   <blockquote><b>The Information App that provide users detected water level.</b></blockquote>
   <pre align="center">App Store: <a href="https://apps.apple.com/kr/app/wateraiinfo/id6444245568">wateraiInfo</a><br/></pre>
@@ -11,6 +9,11 @@
 </div>
 
 <br/>
+
+<div align="center">
+  <img src="READMEimg/appstore.png" width="50%">
+  <br />
+</div>
 
 ### Features
 
