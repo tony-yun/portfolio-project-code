@@ -2,7 +2,7 @@
 
 <div align="center">
   <br />
-  <blockquote><b>The Information App that provide users to upload the selected file and data, transfer inside the form.</b></blockquote>
+  <blockquote><b>The App that provide users to upload the selected file and data, transfer inside the form.</b></blockquote>
 </div>
 
 <br/>
