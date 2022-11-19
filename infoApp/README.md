@@ -14,16 +14,6 @@
 <br/>
 <br/>
 
-<div>
-  <img align="right" width="35%" src="docs/static/img/example.png">
-</div>
-
-### Documentation
-
-* [Guides](https://mrousavy.github.io/react-native-vision-camera/docs/guides)
-* [API](https://mrousavy.github.io/react-native-vision-camera/docs/api)
-* [Example](./example/)
-
 ### Features
 
 * Photo, Video and Snapshot capture
