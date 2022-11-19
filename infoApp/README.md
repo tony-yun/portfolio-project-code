@@ -5,7 +5,6 @@
   <br />
   <blockquote><b>The Information App that provide users detected water level.</b></blockquote>
   <pre align="center">App Store: <a href="https://apps.apple.com/kr/app/wateraiinfo/id6444245568">wateraiInfo</a><br/>Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.wateraiinfo">wateraiInfo</a></pre>
-  <pre align="center">Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.wateraiinfo">wateraiInfo</a><br/></pre>
 </div>
 
 <br/>
