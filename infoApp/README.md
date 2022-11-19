@@ -54,12 +54,12 @@ const App = () => {
         };
     }
   };
-
+ /* ... */
   const [loginState, dispatch] = React.useReducer(
     loginReducer,
     initialLoginState,
   );
-
+ /* ... */
   const authContext = React.useMemo(
     () => ({
       /*SignInScreen.js*/
