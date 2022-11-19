@@ -52,6 +52,6 @@ return (
 * Started from App UI/UX design, App login logic configuration, Coding, http protocol communication to nodejs api configuration all by myself.
 * Published successfully on Google Play Store when the user Auth is completed.
 * Rejected by Apple about 10 times, they needed more function to publish on AppStore.
-* Added guest mode login, added user bookmark function (DB N:M logic).
-* At last, finished the internal testing furing TestFlight and Google Play Console.
-* Published successfully on App Store.
+* Following Apple's construction, added guest mode login, added user bookmark logic (DB N:M logic).
+* At last, finished the internal testing with using TestFlight and Google Play Console.
+* Finally, published successfully on App Store.
