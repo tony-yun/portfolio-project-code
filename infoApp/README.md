@@ -11,7 +11,9 @@
 <br/>
 
 <div align="center">
-  <img src="READMEimg/appstore.png" width="50%">
+  <img src="READMEimg/appstore.png" width="30%" height="50%">
+  <img src="READMEimg/detailscreen.png" width="30%" height="50%">
+  <img src="READMEimg/homescreen.PNG" width="30%" height="50%">
   <br />
 </div>
 
