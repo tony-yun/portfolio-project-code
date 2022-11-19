@@ -12,3 +12,8 @@
   <img src="READMEimg/uploadScreen.png" width="30%" height="50%"/>
   <br />
 </div>
+
+### Features
+
+* Apollo client, navigation setOptions, navigation props.
+* ReactNativeFile, useForm, formData.
