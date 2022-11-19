@@ -8,7 +8,7 @@
 <br/>
 
 <div align="center">
-  <img src="READMEimg/selectScreen.png" width="30%" height="50%">
-  <img src="READMEimg/uploadScreen.PNG" width="30%" height="50%">
+  <img src="READMEimg/selectScreen.png" width="40%" />
+  <img src="READMEimg/uploadScreen.PNG" width="40%" />
   <br />
 </div>
