@@ -1,5 +1,5 @@
-<h1 align="center">[React Native]wateraiInfo<br/><h2>(iOS & Android)</h2></h1>
-<h align="center">(iOS & Android)</h1>
+<h1 align="center">[React Native]wateraiInfo<br/></h1>
+<h2 align="center">(iOS & Android)</h2>
 
 <div align="center">
   <br />
