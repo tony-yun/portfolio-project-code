@@ -16,37 +16,37 @@
   <br />
 </div>
 
+<br/>
+
 ### Features
 
-* Photo, Video and Snapshot capture
-* Customizable devices and multi-cameras (smoothly zoom out to "fish-eye" camera)
-* Customizable FPS
-* [Frame Processors](https://mrousavy.github.io/react-native-vision-camera/docs/guides/frame-processors) (JS worklets to run QR-Code scanning, facial recognition, AI object detection, realtime video chats, ...)
-* Smooth zooming (Reanimated)
-* Fast pause and resume
-* HDR & Night modes
-
-> See the [example](./example/) app
+* Sign Up, Sign in, Withdrawal, Or view contents in guest mode, jwt token, userAuth.
+* Navigation, SplashScreen, AsyncStorage, Axios, Module-resolver, Props, Flatlist, etc.
+* User can view the different contents according to usertype.
 
 ### Example
 
 ```tsx
-function App() {
-  const devices = useCameraDevices('wide-angle-camera')
-  const device = devices.back
-
-  if (device == null) return <LoadingView />
-  return (
-    <Camera
-      style={StyleSheet.absoluteFill}
-      device={device}
-      isActive={true}
-    />
-  )
-}
+//App.js
+return (
+    <AuthContext.Provider value={authContext}>
+      <NavigationContainer>
+        <NativeStack.Navigator screenOptions={{headerShown: false}}>
+          {loginState.userToken === null ? (
+            <NativeStack.Screen name="Stack" component={Stack} />
+          ) : (
+            <>
+              <NativeStack.Screen name="Tab" component={Tab} />
+              <NativeStack.Screen name="DetailStack" component={DetailStack} />
+            </>
+          )}
+        </NativeStack.Navigator>
+      </NavigationContainer>
+    </AuthContext.Provider>
+  );
 ```
 
-### Adopting at scale
+### Development Progress
 
 <a href="https://github.com/sponsors/mrousavy">
   <img align="right" width="160" alt="This library helped you? Consider sponsoring!" src=".github/funding-octocat.svg">
@@ -57,5 +57,3 @@ VisionCamera is provided _as is_, I work on it in my free time.
 If you're integrating VisionCamera in a production app, consider [funding this project](https://github.com/sponsors/mrousavy) and <a href="mailto:me@mrousavy.com?subject=Adopting VisionCamera at scale">contact me</a> to receive premium enterprise support, help with issues, prioritize bugfixes, request features, help at integrating VisionCamera and/or Frame Processors, and more.
 
 <br />
-
-#### 🚀 Get started by [setting up permissions](https://mrousavy.github.io/react-native-vision-camera/docs/guides/)!
