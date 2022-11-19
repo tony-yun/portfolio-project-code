@@ -23,6 +23,7 @@
 * Sign Up, Sign in, Withdrawal, Or view contents in guest mode, jwt token, userAuth.
 * Navigation, SplashScreen, AsyncStorage, Axios, Module-resolver, Props, Flatlist, etc.
 * User can view the different contents according to usertype.
+* User can bookmark their contents to see them in bookmark screen.
 
 ### Example
 
@@ -48,12 +49,9 @@ return (
 
 ### Development Progress
 
-<a href="https://github.com/sponsors/mrousavy">
-  <img align="right" width="160" alt="This library helped you? Consider sponsoring!" src=".github/funding-octocat.svg">
-</a>
-
-VisionCamera is provided _as is_, I work on it in my free time.
-
-If you're integrating VisionCamera in a production app, consider [funding this project](https://github.com/sponsors/mrousavy) and <a href="mailto:me@mrousavy.com?subject=Adopting VisionCamera at scale">contact me</a> to receive premium enterprise support, help with issues, prioritize bugfixes, request features, help at integrating VisionCamera and/or Frame Processors, and more.
-
-<br />
+* Started from App UI/UX design, App login logic configuration, Coding, http protocol communication to nodejs api configuration all by myself.
+* Published successfully on Google Play Store when the user Auth is completed.
+* Rejected by Apple about 10 times, they needed more function to publish on AppStore.
+* Added guest mode login, added user bookmark function (DB N:M logic).
+* At last, finished the internal testing furing TestFlight and Google Play Console.
+* Published successfully on App Store.
