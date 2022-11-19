@@ -40,20 +40,7 @@ const App = () => {
       case 'REGISTER':
         return {
           ...prevState,
-          // userToken: action.userToken,
-        };
-      case 'LOGIN':
-        return {
-          ...prevState,
-          userToken: action.userToken,
-        };
-      case 'LOGOUT':
-        return {
-          ...prevState,
-          userToken: null,
-        };
-    }
-  };
+
  /* ... */
   const [loginState, dispatch] = React.useReducer(
     loginReducer,
@@ -62,31 +49,16 @@ const App = () => {
  /* ... */
   const authContext = React.useMemo(
     () => ({
-      /*SignInScreen.js*/
-      signIn: async (phonenumber, password) => {
+      
+      signIn: async (props) => {
         axios
-          .post(`${BASE_URL}/loginUser`, {
-            phonenumber,
-            password,
+          .post(`${BASE_URL}/api`, {
+            props
           })
           .then(res => {
             console.log(res);
             if (res?.data?.ok === true) {
-              AsyncStorage.setItem(
-                'userToken',
-                JSON.stringify(res?.data?.token),
-              );
-              console.log(res?.data?.token);
-              dispatch({
-                type: 'LOGIN',
-                userToken: res?.data?.token,
-              });
-            } else {
-              Alert.alert(`${res?.data?.error}`);
-            }
-          })
-          .catch(e => Alert.alert(e));
-      },
+
  /* ... */
 return (
     <AuthContext.Provider value={authContext}>
