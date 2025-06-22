@@ -1,4 +1,4 @@
-<h1 align="center">[React Native]wateraiInfo<br/></h1>
+<h1 align="center">[React Native]wateraiInfo (2022)<br/></h1>
 <h2 align="center">(iOS & Android)</h2>
 
 <div align="center">

@@ -1,4 +1,4 @@
-<h1 align="center">[React Native] Auto Recording App<br/></h1>
+<h1 align="center">[React Native] Auto Recording App (2022)<br/></h1>
 
 <div align="center">
   <br />
