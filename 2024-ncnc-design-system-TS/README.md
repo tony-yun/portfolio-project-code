@@ -2,7 +2,7 @@
 
 <div align="center">
 
-공통 UI 가이드와 컴포넌트를 통합 관리하는 디자인 시스템
+공통 UI 가이드와 컴포넌트를 통합 관리하는 디자인 시스템 (모노레포 기반)
 
 <img src="./assets/img/nds-controller.png" width="30%" />
 <img src="./assets/img/nds-icon.png" width="30%" />
