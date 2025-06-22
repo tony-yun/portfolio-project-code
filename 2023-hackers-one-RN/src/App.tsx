@@ -18,9 +18,13 @@ const App = () => {
   useEffect(() => {
     const init = async () => {
       await setupPermissions();
+
       const token = await messaging().getToken();
+
       setFcmToken(token);
+
       await AsyncStorage.setItem("fcmToken", token);
+
       setIsReady(true);
     };
 
@@ -31,10 +35,12 @@ const App = () => {
         { text: "취소", style: "cancel" },
         { text: "확인", onPress: () => BackHandler.exitApp() },
       ]);
+
       return true;
     };
 
     BackHandler.addEventListener("hardwareBackPress", backAction);
+
     return () =>
       BackHandler.removeEventListener("hardwareBackPress", backAction);
   }, []);

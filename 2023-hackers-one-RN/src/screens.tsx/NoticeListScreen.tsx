@@ -23,16 +23,20 @@ class NoticeListScreen extends Component {
   fetchNotices = async () => {
     try {
       const response = await fetch("https://api.example.com/notices");
+
       const json = await response.json();
+
       this.setState({ notices: json.data.notice, loading: false });
     } catch (e) {
       console.warn("공지사항 불러오기 실패", e);
+
       this.setState({ loading: false });
     }
   };
 
   render() {
     const { loading, notices, selectedCategory } = this.state;
+
     const filtered = selectedCategory
       ? notices.filter((n) => n.Category === selectedCategory)
       : notices;

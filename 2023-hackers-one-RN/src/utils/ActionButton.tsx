@@ -13,7 +13,9 @@ export default class ActionButton extends Component {
 
   toggle = () => {
     const toValue = this.state.active ? 0 : 1;
+
     Animated.spring(this.anim, { toValue, useNativeDriver: false }).start();
+
     this.setState({ active: !this.state.active });
   };
 
@@ -22,6 +24,7 @@ export default class ActionButton extends Component {
       inputRange: [0, 1],
       outputRange: [1, 1.2],
     });
+
     const rotate = this.anim.interpolate({
       inputRange: [0, 1],
       outputRange: ["0deg", "45deg"],
