@@ -3,7 +3,7 @@
 <div align="center">
 
 📱 광고 없이 간편한 아이돌 응원용 LED 전광판 앱  
-[앱스토어 바로가기 →](https://apps.apple.com/kr/app/your-app-id)
+[앱스토어 바로가기 →](https://apps.apple.com/kr/app/%EC%B5%9C%EC%95%A0%EC%9D%98-%EC%95%84%EC%9D%B4%EB%8F%8C/id6470147565)
 
 <img src="assets/img/led2.PNG" width="30%" />
 <img src="assets/img/led3.PNG" width="30%" />
