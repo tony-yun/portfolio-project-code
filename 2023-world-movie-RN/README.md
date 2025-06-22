@@ -52,7 +52,7 @@ Firebase를 기반으로 사용자 인증 및 영화 찜 기능을 제공하며,
 
 | 구분            | 기술                       |
 | --------------- | -------------------------- |
-| **프레임워크**  | React Native (Expo)        |
+| **프레임워크**  | React Native               |
 | **언어**        | TypeScript                 |
 | **상태관리**    | Zustand                    |
 | **인증 및 DB**  | Firebase (Auth, Firestore) |
