@@ -1,10 +1,3 @@
-//
-//  AddButton.swift
-//  GroceryList
-//
-//  Created by Yun Tae Woong on 11/14/23.
-//
-
 import Foundation
 import SwiftUI
 

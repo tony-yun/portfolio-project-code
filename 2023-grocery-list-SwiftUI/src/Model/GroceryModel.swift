@@ -1,10 +1,3 @@
-//
-//  GroceryModel.swift
-//  GroceryList
-//
-//  Created by Yun Tae Woong on 11/13/23.
-//
-
 import Foundation
 
 struct GroceryModel: Identifiable, Codable, Hashable {

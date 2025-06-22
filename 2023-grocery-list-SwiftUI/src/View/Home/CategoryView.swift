@@ -1,10 +1,3 @@
-//
-//  CategoryView.swift
-//  GroceryList
-//
-//  Created by Yun Tae Woong on 11/9/23.
-//
-
 import SwiftUI
 
 struct CategoryView: View {

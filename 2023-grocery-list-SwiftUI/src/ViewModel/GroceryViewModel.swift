@@ -1,10 +1,3 @@
-//
-//  GroceryViewModel.swift
-//  GroceryList
-//
-//  Created by Yun Tae Woong on 11/9/23.
-//
-
 import Foundation
 import SwiftUI
 import WidgetKit
