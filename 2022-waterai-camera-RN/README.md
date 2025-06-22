@@ -1,19 +1,30 @@
-<h1 align="center">[React Native] Auto Recording App (2022)<br/></h1>
+# 📤 [React Native] Water AI Camera (2022)
 
 <div align="center">
-  <br />
-  <blockquote><b>An App that can replace the CCTV.</b></blockquote>
+  <img src="assets/img/standby.png" width="30%" height="50%" />
+  <img src="assets/img/recording.png" width="30%" height="50%" />
 </div>
 
-<br/>
+---
 
-<div align="center">
-  <img src="assets/img/standby.png" width="30%" height="50%"/>
-  <img src="assets/img/recording.png" width="30%" height="50%"/>
-  <br />
-</div>
+### 🎯 주요 기능
 
-### Features
+- 디바이스 위치 기반 자동 녹화 기능
+- 카메라 제어 및 루프 레코딩
+- 서버에서 전달된 값으로 줌/녹화시간 등 동적 제어 가능
+- `react-native-device-info`, `camera`, `location` 등 다양한 네이티브 기능 활용
 
-* device location, react-native-device-info, camera, auto & loop recording.
-* can change the value of response data from server such as zoom, duration value.
+---
+
+### 🛠 기술 스택
+
+- React Native, React Navigation, Camera APIs
+- Axios, Loop Recording Logic, Auto Trigger, Custom UI
+
+---
+
+### 🧱 개발 후기
+
+- CCTV 없이 실시간 상황을 자동으로 녹화할 수 있는 앱 설계
+- 녹화 기준값 및 사용자 설정을 서버에서 받아서 동적으로 반영
+- iOS/Android 양쪽에 맞춘 크로스 플랫폼 UI 구현
