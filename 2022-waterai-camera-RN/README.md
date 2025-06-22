@@ -18,8 +18,15 @@
 
 ### 🛠 기술 스택
 
-- React Native, React Navigation, Camera APIs
-- Axios, Loop Recording Logic, Auto Trigger, Custom UI
+| 영역        | 사용 기술 및 라이브러리  |
+| ----------- | ------------------------ |
+| 프레임워크  | **React Native**         |
+| 내비게이션  | **React Navigation**     |
+| 카메라 기능 | **Camera API**           |
+| HTTP 통신   | **Axios**                |
+| 녹화 로직   | Loop Recording Logic     |
+| 자동 트리거 | Auto Trigger (조건 기반) |
+| UI 구성     | Custom Component UI      |
 
 ---
 
