@@ -1,13 +1,5 @@
 # 📤 [React Native] Water AI Info (2022)
 
-> 대한민국 하천의 수위 관측 데이터를 실시간으로 조회하는 앱
-
----
-
-<div align="center">
-  <img src="assets/img/appstore.png" width="25%" />
-</div>
-
 ---
 
 ### 📱 About
@@ -32,6 +24,7 @@
 ### 🖼 Screenshots
 
 <div align="center">
+  <img src="assets/img/appstore.png" width="30%" />
   <img src="assets/img/homescreen.PNG" width="30%" />
   <img src="assets/img/detailscreen.png" width="30%" />
 </div>
