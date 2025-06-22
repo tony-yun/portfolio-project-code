@@ -8,8 +8,8 @@
 <br/>
 
 <div align="center">
-  <img src="READMEimg/standby.png" width="30%" height="50%"/>
-  <img src="READMEimg/recording.png" width="30%" height="50%"/>
+  <img src="assets/img/standby.png" width="30%" height="50%"/>
+  <img src="assets/img/recording.png" width="30%" height="50%"/>
   <br />
 </div>
 

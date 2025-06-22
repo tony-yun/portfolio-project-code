@@ -1,0 +1,13 @@
+export const MIDNIGHT_BLUE: string = "";
+export const COMMON_TEXTCOLOR: string = "";
+export const DEEP_DARK: string = "";
+export const BUTTON_BLUE: string = "";
+export const CLOUD_COLOR: string = "";
+export const WHITE: string = "white";
+export const BLACK: string = "black";
+export const GRAY: string = "gray";
+export const TEXT_BACK_BLUR_COLOR: string = "";
+export const GREEN: string = "green";
+export const YOUTUBE_SEARCH: string = "";
+export const YOUTUBE_PLACEHOLDER: string = "";
+export const RED: string = "red";
