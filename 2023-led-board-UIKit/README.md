@@ -5,9 +5,9 @@
 📱 광고 없이 간편한 아이돌 응원용 LED 전광판 앱  
 [앱스토어 바로가기 →](https://apps.apple.com/kr/app/your-app-id)
 
-<img src="./assets/img/led2.png" width="30%" />
-<img src="./assets/img/led3.png" width="30%" />
-<img src="./assets/img/led4.png" width="30%" />
+<img src="assets/img/led2.png" width="30%" />
+<img src="assets/img/led3.png" width="30%" />
+<img src="assets/img/led4.png" width="30%" />
 
 </div>
 
@@ -82,11 +82,11 @@
 
 ### 메인 화면 - 메시지 작성 및 설정
 
-<img src="./assets/img/led4.png" width="40%" />
+<img src="assets/img/led4.png" width="40%" />
 
 ### 전광판 실행 화면 - 스크롤링 응원 메시지
 
-<img src="./assets/img/led3.png" width="40%" />
+<img src="assets/img/led3.png" width="40%" />
 
 ---
 
