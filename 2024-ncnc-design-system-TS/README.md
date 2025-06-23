@@ -81,7 +81,7 @@ React Native 앱을 비롯한 웹뷰, 내부 시스템 웹 등 회사의 모든 
 
 <img src="./assets/img/nds-button.png" width="45%" />
 
-- 기본 버튼(basic) 제공
+- 기본 버튼 제공
 - 상태별 시각 스타일:
   - `default`
   - `pressed`
