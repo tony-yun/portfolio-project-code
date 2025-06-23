@@ -1,4 +1,4 @@
-# 🎨 NDS - 니콘내콘 Design System
+# 🎨 NDS - 니콘내콘 Design System (실무 프로젝트)
 
 <div align="center">
 

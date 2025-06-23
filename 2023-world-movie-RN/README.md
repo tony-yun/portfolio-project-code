@@ -1,4 +1,4 @@
-# 🎬 World Movie (월드무비) (2023)
+# 🎬 World Movie - 월드무비 (2023) (개인 프로젝트)
 
 <div align="center">
 

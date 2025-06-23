@@ -1,4 +1,4 @@
-# 📤 [React Native] Water AI Camera (2022)
+# 📤 Water AI Camera (2022) (실무 프로젝트)
 
 <div align="center">
   <img src="assets/img/standby.png" width="30%" height="50%" />

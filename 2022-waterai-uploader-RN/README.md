@@ -1,4 +1,4 @@
-# 📤 [React Native] Water AI Uploader (2022)
+# 📤 Water AI Uploader (2022) (실무 프로젝트)
 
 > 사용자가 영상 파일을 선택하고 정보를 입력한 뒤 업로드할 수 있도록 구성된 React Native 기반의 앱입니다.
 

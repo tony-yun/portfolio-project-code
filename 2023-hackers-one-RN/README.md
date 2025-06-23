@@ -1,4 +1,4 @@
-# 📚 해커스ONE (2023)
+# 📚 해커스ONE (2023) (실무 프로젝트)
 
 > React Native 기반 iOS & Android 학습 앱  
 > [App Store에서 보기](https://apps.apple.com/kr/app/%ED%95%B4%EC%BB%A4%EC%8A%A4-one-%EC%8A%A4%EB%A7%88%ED%8A%B8-%ED%81%B4%EB%9E%98%EC%8A%A4/id1538534916)

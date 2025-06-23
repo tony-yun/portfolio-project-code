@@ -1,4 +1,4 @@
-# 📤 [React Native] Water AI Info (2022)
+# 📤 Water AI Info (2022) (실무 프로젝트)
 
 ### 📱 About
 
