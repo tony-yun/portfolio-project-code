@@ -1,11 +1,11 @@
-import { storage } from '../storage'
-import { STORAGE } from '../storage/config'
+import { storage } from '../../storage'
+import { STORAGE } from '../../storage/config'
 import { recordError, recordLog } from './error-helper'
 import {
   MMKVStorageKey,
   MMKVStorageValue,
   StringifiedMMKVValueType,
-} from './types/storage.types'
+} from '../types/storage.types'
 
 export const getValueFromStorage = <T extends MMKVStorageKey>(key: T) => {
   if (!(key in STORAGE)) {

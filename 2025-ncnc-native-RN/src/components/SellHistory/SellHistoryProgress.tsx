@@ -16,7 +16,7 @@ import {
 } from '../../public/types/channeltalk/general.types'
 import { ErrorResponseData } from '../../public/types/error.types'
 import { SellCon } from '../../public/types/sell/con.types'
-import { sleep } from '../../public/util'
+import { sleep } from '../../public/utils/util'
 import { updateChanneltalkUserReportedSellConInfo } from '../../queries/channeltalk'
 import NcncText from '../public/NcncText'
 import SellCancelTipPopup from './SellCancelTipPopup'
