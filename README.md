@@ -1,23 +1,9 @@
 ## 📁 Portfolio Archive
 
-This repository contains selected code snippets and development screenshots from both **personal** and **professional** frontend projects.
-
-The work showcased here mainly focuses on mobile and web UI development using:
-- **React Native**
-- **React**
-- **Next.js**
-- **SwiftUI**
-- **UIKit**
-
-> It serves as a portfolio archive to highlight my experience and skills in building user interfaces across platforms, through both personal initiatives and real-world production work.
-
-🔒 **Note:** Due to security and confidentiality concerns, the code or content of professional projects has been modified or partially omitted.
-
----
-
 이 저장소는 과거에 진행한 **개인 및 실무 프론트엔드 프로젝트**의 코드 일부와 개발 화면 캡쳐를 모아놓은 포트폴리오 아카이브입니다.
 
 주로 아래 기술 스택을 사용한 **모바일 및 웹 UI 개발 작업**을 중심으로 구성되어 있습니다:
+
 - **React Native**
 - **React**
 - **Next.js**
@@ -27,3 +13,27 @@ The work showcased here mainly focuses on mobile and web UI development using:
 > 개인 프로젝트와 실제 서비스 운영 경험을 바탕으로 한 사용자 인터페이스 개발 역량을 보여주기 위해 구성된 저장소입니다.
 
 🔒 **알림:** 보안 및 기밀 유지 사유로 인해 실무 프로젝트의 코드 또는 내용은 수정되었거나 일부 생략되었습니다.
+
+---
+
+## 🧩 기술 스택별 사용 사례 및 성과
+
+특히 실무 프로젝트에서는 각 플랫폼과 목적에 맞는 기술 스택을 선택하여 개발 효율성과 유지보수성을 높였습니다.
+
+- **React Native**  
+  → 니콘내콘 앱과 해커스ONE 앱에서 크로스 플랫폼 환경 및 네이티브 기능 연동에 활용하였고,  
+  Recoil, MMKV, Fastlane 등을 통해 안정성과 자동화를 구현했습니다.
+
+- **Next.js (App/Page Router)**  
+  → 결제 및 쿠폰 문의 처리 웹뷰에서 사용하였으며, SSR/CSR 혼합 구조 및 웹뷰 대응 설계를 통해  
+  유연한 사용자 흐름을 지원했습니다.
+
+- **TypeScript + Tailwind CSS / Emotion**  
+  → 각 프로젝트에서 스타일 일관성과 생산성을 위해 적극 활용되었으며,  
+  디자인 시스템(NDS)과의 연동을 통해 UI 통일성을 확보했습니다.
+
+- **디자인 시스템 & 모노레포 운영**  
+  → 사내 전 프로젝트에 공통 적용 가능한 컴포넌트를 NDS로 통합하여,  
+  유지보수 효율성과 협업 생산성을 높였습니다.
+
+이러한 기술적 기반 위에서 사용성과 성능을 모두 고려한 UI/UX를 구현해낸 실무 경험을 본 저장소를 통해 보여드리고자 합니다.
