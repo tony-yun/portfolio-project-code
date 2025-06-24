@@ -1,0 +1,29 @@
+{
+  "name": "ncnc-native",
+  "version": "9.9.9",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "pod:install": "cd ios && bundle exec pod install && cd ..",
+    "start": "react-native start --reset-cache --experimental-debugger",
+    "codepush:ios": "ENV=production bundle exec fastlane ios codepush",
+    "codepush:android": "ENV=production bundle exec fastlane android codepush",
+    "codepush:ios:staging": "ENV=staging bundle exec fastlane ios codepush",
+    "codepush:android:staging": "ENV=staging bundle exec fastlane android codepush",
+    "release:ios": "bundle exec fastlane ios beta",
+    "release:android": "bundle exec fastlane android beta",
+    "clean": "react-native clean-project-auto",
+    "tsc": "tsc",
+    "link-assets": "npx react-native-asset",
+    "lint": "MODE=ci eslint . --quiet"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
+  },
+  "prettier": "our-company-name/prettier-config",
+  "packageManager": "yarn@4.1.0"
+}

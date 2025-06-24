@@ -1,0 +1,166 @@
+# 배포 파이프라인 정의
+
+desc "Set up"
+
+xcodeproj = "./ios/NcncNative.xcodeproj"
+
+# Read version from package.json
+def get_package_version
+  package_json = JSON.parse(File.read('../package.json'))
+  version = package_json['version']
+  version.split('-').first
+end
+
+# Check if .env.production exists
+def check_env_production
+  env_file = "../.env.production"
+  unless File.exist?(env_file)
+    UI.error "❌ .env.production file not found!"
+    UI.error "Please make sure .env.production file exists in the root directory"
+    raise "Missing .env.production file"
+  end
+  UI.success "✅ .env.production file found"
+end
+
+# Update version for specified platform
+def update_version(platform)
+  version = get_package_version
+
+  case platform
+  when :ios
+    pbxproj_path = "../ios/NcncNative.xcodeproj/project.pbxproj"
+    pbxproj_content = File.read(pbxproj_path)
+    updated_content = pbxproj_content.gsub(/MARKETING_VERSION = .*;/, "MARKETING_VERSION = #{version};")
+    File.write(pbxproj_path, updated_content)
+    UI.success "iOS version updated to #{version}"
+  when :android
+    android_gradle_file = "../android/app/build.gradle"
+    gradle_content = File.read(android_gradle_file)
+    updated_content = gradle_content.gsub(/versionName ['"].*['"]/, "versionName '#{version}'")
+    File.write(android_gradle_file, updated_content)
+    UI.success "Android version updated to #{version}"
+  else
+    UI.error "Invalid platform: #{platform}"
+    raise "Invalid platform"
+  end
+end
+
+platform :ios do
+  desc "Update iOS version number from package.json"
+  lane :update_version do
+    update_version(:ios)
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    check_env_production
+    update_version(:ios)
+    match(type: "appstore")
+
+    # Store original build number and CURRENT_PROJECT_VERSION
+    original_build_number = get_build_number(xcodeproj: xcodeproj)
+    pbxproj_path = "../ios/NcncNative.xcodeproj/project.pbxproj"
+    pbxproj_content = File.read(pbxproj_path)
+    original_current_project_version = pbxproj_content[/CURRENT_PROJECT_VERSION = (\d+);/, 1]
+
+    begin
+      increment_build_number(xcodeproj: xcodeproj)
+      sh('bundle check || bundle install')
+      sh('cd ../ios && bundle exec pod install && cd ..')
+      build_app(workspace: "./ios/project.xcworkspace",
+        scheme: "ENV['']")
+
+      app_store_connect_api_key(
+        key_id: "ENV['']",
+        issuer_id: "ENV['']",
+        key_filepath: "fastlane/certificate.p8",
+        duration: 600,
+        in_house: false
+      )
+      upload_to_testflight(
+        itc_provider: "ENV['']"
+      )
+
+      version = get_version_number(xcodeproj: xcodeproj, target: "project")
+
+      download_dsyms(version: version)
+      upload_symbols_to_bugsnag
+
+      sh('cd .. && ./upload-source-maps.sh ios appstore')
+    rescue => e
+      # Revert build number and CURRENT_PROJECT_VERSION on failure
+      increment_build_number(
+        xcodeproj: xcodeproj,
+        build_number: original_build_number
+      )
+
+      UI.error "❌ Build failed: #{e.message}"
+      UI.error "Build number reverted to #{original_build_number}"
+      UI.error "CURRENT_PROJECT_VERSION reverted to #{original_current_project_version}"
+      raise e
+    end
+  end
+
+  desc "Release codePush updates to AppCenter"
+  lane :codepush do
+    prompt_answer = prompt(
+      text: "의무 설치입니까? (y/n):",
+    )
+    is_mandatory = prompt_answer.downcase == "y"
+
+    environment = ENV["ENV"]&.capitalize
+
+    sh("cd .. && ./codepush-release.sh ios #{is_mandatory} #{environment}")
+    sh('cd .. && ./upload-source-maps.sh ios codepush')
+  end
+end
+
+platform :android do
+  desc "Update Android version number from package.json"
+  lane :update_version do
+    update_version(:android)
+  end
+
+  desc "Submit a new Beta Build"
+  lane :beta do
+    check_env_production
+    update_version(:android)
+
+    # Store original version code
+    gradle_file_path = File.expand_path("../android/app/build.gradle", __dir__)
+    gradle_content = File.read(gradle_file_path)
+    original_version_code = gradle_content[/versionCode (\d+)/, 1]
+
+    begin
+      android_set_version_code(gradle_file: gradle_file_path)
+      gradle(task: "clean", project_dir: './android')
+      gradle(task: "bundle", build_type: "Release", project_dir: './android')
+      supply(track: 'internal', skip_upload_apk: true)
+
+      sh('cd .. && ./upload-source-maps.sh android appstore')
+    rescue => e
+      # Revert version code on failure
+      android_set_version_code(
+        gradle_file: gradle_file_path,
+        version_code: original_version_code
+      )
+
+      UI.error "❌ Build failed: #{e.message}"
+      UI.error "Version code reverted to #{original_version_code}"
+      raise e
+    end
+  end
+
+  desc "Release codePush updates to AppCenter"
+  lane :codepush do
+    prompt_answer = prompt(
+      text: "의무 설치입니까? (y/n):",
+    )
+    is_mandatory = prompt_answer.downcase == "y"
+
+    environment = ENV["ENV"]&.capitalize
+
+    sh("cd .. && ./codepush-release.sh android #{is_mandatory} #{environment}")
+    sh('cd .. && ./upload-source-maps.sh android codepush')
+  end
+end

@@ -1,0 +1,7 @@
+#  Git 저장소에서 인증서 호출
+
+git_url("blur")
+
+storage_mode("git")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development

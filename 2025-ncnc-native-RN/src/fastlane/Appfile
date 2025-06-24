@@ -1,0 +1,10 @@
+# match를 비롯한 Fastlane action 참조값
+
+app_identifier(ENV['APP_IDENTIFIER'])
+apple_id(ENV['APPLE_ID'])
+
+itc_team_id(ENV['ITC_TEAM_ID'])
+team_id(ENV['TEAM_ID'])
+
+json_key_file(ENV['JSON_KEY_FILE']) 
+package_name(ENV['PACKAGE_NAME'])
