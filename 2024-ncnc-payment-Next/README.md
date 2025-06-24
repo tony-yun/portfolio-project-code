@@ -29,7 +29,7 @@
 | **언어**             | TypeScript                                                |
 | **상태 관리**        | Recoil                                                    |
 | **데이터 패칭**      | React Query                                               |
-| **실시간 통신 방식** | WebSocket + Polling                                       |
+| **실시간 통신 방식** | WebSocket                                                 |
 | **스타일링**         | Emotion + NDS 디자인 시스템                               |
 | **이벤트 트래킹**    | Amplitude 이벤트 로깅                                     |
 | **Native 연동**      | React Native WebView postMessage 기반 Native <-> Web 통신 |
@@ -78,7 +78,7 @@
 
 ### ✅ `purchased/[orderId].tsx` - 결제 완료/실패 결과 페이지
 
-- 소켓 + polling 기반 주문 결과 수신
+- 소켓 기반 주문 결과 수신
 - 성공/실패/대기 상태에 따른 메시지 분기
 - 리워드 지급 조건 시 안내 버튼 제공
 - Amplitude 이벤트: `viewed checkout buy`, `viewed checkout cart buy`
