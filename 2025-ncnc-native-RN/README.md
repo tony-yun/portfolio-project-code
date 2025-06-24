@@ -1,4 +1,4 @@
-# 📱 니콘내콘 앱 개발 기술 정리 (실무 프로젝트)
+# 📱 니콘내콘 앱 (실무 프로젝트) (2024-2025)
 
 <div align="center">
 
@@ -35,7 +35,7 @@ Recoil과 React Query를 통한 안정적인 상태 관리, MMKV 기반 고속 �
 | **상태관리**      | Recoil                                                         |
 | **스토리지**      | MMKV                                                           |
 | **스타일링**      | Emotion + StyleSheet 병행 사용                                 |
-| **이미지 처리**   | Lottie, SVG, PNG 등 다양한 이미지 형식 최적화                  |
+| **이미지 처리**   | Lottie, SVG, PNG 등 다양한 형식 최적화                         |
 | **네비게이션**    | React Navigation (Stack + Tab 구조)                            |
 | **CI**            | GitHub Actions, Husky (type-check, lint, pre-commit/push hook) |
 | **CD**            | Fastlane 기반 iOS/Android 빌드 + 버전 자동화                   |
@@ -84,8 +84,6 @@ Recoil과 React Query를 통한 안정적인 상태 관리, MMKV 기반 고속 �
 ## 🎨 스타일링 가이드
 
 - `StyleSheet` + `@emotion/native` 병행 사용
-- **Lottie / SVG / 이미지 최적화**
-- CDN 이미지 로딩 시 캐시 전략 포함
 
 ---
 
