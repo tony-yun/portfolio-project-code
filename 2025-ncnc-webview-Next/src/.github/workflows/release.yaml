@@ -1,0 +1,74 @@
+name: release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: [self-hosted, Linux]
+    steps:
+      - name: Set envs
+        run: |
+          echo "DOCKER_REPO=..." >> $GITHUB_ENV
+        if: ${{!contains(github.ref_name, 'alpha')}}
+
+      - name: action-slack
+        uses: 8398a7/action-slack@v3.5.0
+        with:
+          status: custom
+          custom_payload: |
+            {
+              text: "릴리즈를 시작합니다.",
+              attachments: [{
+                color: 'good',
+                fields: [{
+                  title: 'Repo',
+                  value: '${{github.repository}}',
+                  short: true
+                },
+                {
+                  title: 'Version',
+                  value: '${{github.event.release.tag_name}}',
+                  short: true
+                }]
+              }]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build and push Docker images
+        run: |
+          docker login -u ...
+
+      - name: Set Image
+        run: |
+          kubectl set image ...
+        if: ${{!contains(github.ref_name, 'alpha')}}
+
+      - name: action-slack
+        uses: 8398a7/action-slack@v3.5.0
+        with:
+          status: custom
+          custom_payload: |
+            {
+              text: "릴리즈가 완료되었습니다! 🚀🚀",
+              attachments: [{
+                color: 'good',
+                fields: [{
+                  title: 'Repo',
+                  value: '${{github.repository}}',
+                  short: true
+                },
+                {
+                  title: 'Version',
+                  value: '${{github.event.release.tag_name}}',
+                  short: true
+                }]
+              }]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}

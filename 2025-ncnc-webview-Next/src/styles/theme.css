@@ -1,0 +1,44 @@
+@theme {
+  /* Gray */
+  --color-gray-900: #181d25;
+  --color-gray-800: #474d59;
+  --color-gray-700: #6b7280;
+  --color-gray-600: #7d8796;
+  --color-gray-500: #8c95a3;
+ ...
+
+  /* Red */
+  --color-red-900: #990037;
+  --color-red-800: #b20040;
+  --color-red-700: #cc004a;
+  --color-red-600: #e50053;
+  --color-red-500: #ff005c;
+ ...
+
+  /* Blue */
+
+  /* Green */
+
+  /* Orange */
+
+  /* Red Opacity */
+  --color-red-opacity-900: rgba(255, 0, 92, 0.9);
+  --color-red-opacity-800: rgba(255, 0, 92, 0.8);
+  --color-red-opacity-700: rgba(255, 0, 92, 0.7);
+  --color-red-opacity-600: rgba(255, 0, 92, 0.6);
+  --color-red-opacity-500: rgba(255, 0, 92, 0.5);
+ ...
+
+  /* Gray Opacity */
+
+  /* White Opacity */
+}
+
+@theme static {
+  --color-primary: var(--color-red-500);
+  --color-bottom-sheet-dimmed: var(--color-black-opacity-300);
+  --color-dimmed: var(--color-gray-opacity-300);
+  --color-positive: var(--color-green-500);
+  --color-informative: var(--color-blue-500);
+  --color-cautionary: var(--color-orange-500);
+}

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: fontName;
+  font-weight: 100;
+  font-display: swap;
+  src: url("https://d3rm2sx82p4m88.cloudfront.net/fonts/fontName/thin.woff2")
+      format("woff2"),
+    url("https://d3rm2sx82p4m88.cloudfront.net/fonts/fontName/thin.woff")
+      format("woff"),
+    url("https://d3rm2sx82p4m88.cloudfront.net/fonts/fontName/thin.ttf")
+      format("truetype");
+}
+
+// ...
+
+* {
+  font-family: fontName;
+}
