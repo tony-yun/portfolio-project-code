@@ -7,6 +7,7 @@ MAU 30만 기프티콘 거래 서비스
 <img src="./assets/img/home.PNG" width="30%" />
 <img src="./assets/img/category.PNG" width="30%" />
 <img src="./assets/img/coupon.PNG" width="30%" />
+<img src="./assets/img/sell.PNG" width="30%" />
 <img src="./assets/img/niconmoney.PNG" width="30%" />
 
 </div>
