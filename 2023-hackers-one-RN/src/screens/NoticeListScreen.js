@@ -22,7 +22,7 @@ class NoticeListScreen extends Component {
 
   fetchNotices = async () => {
     try {
-      const response = await fetch("https://api.example.com/notices");
+      const response = await fetch("https://api...");
 
       const json = await response.json();
 
