@@ -33,6 +33,7 @@ import {
   selectedMyNiconMoneyFilterOptionState,
   selectedMyNiconMoneySortOptionState,
 } from '../stores/my-nicon-money'
+import { MainStackScreen } from '../public/types/navigations.types'
 
 const Wrapper = styled.View`
   flex: 1;
@@ -40,7 +41,7 @@ const Wrapper = styled.View`
   background-color: ${color.gray.white};
 `
 
-const MyNiconMoney = () => {
+const MyNiconMoney: MainStackScreen<'MyNiconMoney'> = () => {
   const queryClient = useQueryClient()
 
   const { token } = useMe()
