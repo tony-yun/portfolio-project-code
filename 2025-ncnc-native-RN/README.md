@@ -2,7 +2,7 @@
 
 <div align="center">
 
-MAU 30만 기프티콘 거래 서비스
+MAU 35만 기프티콘 거래 서비스
 
 <img src="./assets/img/home.PNG" width="30%" />
 <img src="./assets/img/category.PNG" width="30%" />
