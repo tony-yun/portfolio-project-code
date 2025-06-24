@@ -1,0 +1,31 @@
+name: check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: [self-hosted, Linux]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: corepack enable
+      - name: Setup yarn
+        run: |
+          yarn config set npmScopes.doublenc-inc.npmRegistryServer "https://npm.pkg.github.com"
+          yarn config set npmScopes.doublenc-inc.npmAlwaysAuth true
+          yarn config set npmScopes.doublenc-inc.npmAuthToken $NPM_AUTH_TOKEN
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.GH_PAT }}
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Typescript check
+        run: |
+          cp .env.example .env
+          yarn tsc
+      - name: Eslint check
+        run: |
+          yarn lint
